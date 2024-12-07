@@ -3,8 +3,8 @@ import filter from '../filter';
 describe('filter function', () => {
   test('filters products based on a predicate', () => {
     const products = [
-      { product: 'T-shirt', availability: true },
-      { product: 'Trouser', availability: false },
+      { product: 'T-shirt', availability: false },
+      { product: 'Trouser', availability: true },
     ];
     const result = filter(products, ({ availability }) => availability);
     expect(result).toEqual([{ product: 'Trouser', availability: true }]);
